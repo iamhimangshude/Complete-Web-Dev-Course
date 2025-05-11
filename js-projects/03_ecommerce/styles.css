@@ -60,6 +60,26 @@ h2 {
   margin-bottom: 20px;
 }
 
+#cart-items>div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+#cart-items>div>button {
+  background-color: #6200ea;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #3700b3;
+  }
+}
+
 #cart-total {
   text-align: right;
 }
