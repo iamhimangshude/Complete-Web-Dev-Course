@@ -51,7 +51,8 @@ const userSchema = new Schema(
 
 // Hooks, middlewares and custom methods in models with JWT
 userSchema.pre("save", async function (next) {
-  if (!this.modified("password")) return next();
+  // fixed the method
+  if (!this.isModified("password")) return next();
 
   this.password = bcrypt.hash(this.password, 10);
 
