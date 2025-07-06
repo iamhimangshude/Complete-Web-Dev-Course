@@ -1,4 +1,4 @@
-import Youtube from './youtube'
+import Youtube from './Youtube'
 
 function App() {
   const username = "hey"
