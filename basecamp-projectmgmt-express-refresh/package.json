@@ -1,0 +1,24 @@
+{
+  "name": "basecamp-projmanagement",
+  "version": "1.0.0",
+  "description": "a project management application for beginners",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "backend",
+    "express",
+    "node",
+    "api",
+    "js"
+  ],
+  "author": "himangshu de",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
