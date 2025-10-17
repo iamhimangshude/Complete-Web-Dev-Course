@@ -1,0 +1,23 @@
+{
+  "name": "project-management-express-refresh",
+  "version": "1.0.0",
+  "description": "a project management application for beginners",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "udemy",
+    "backend",
+    "api",
+    "express",
+    "node"
+  ],
+  "author": "himangshu de",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.6.2"
+  }
+}
