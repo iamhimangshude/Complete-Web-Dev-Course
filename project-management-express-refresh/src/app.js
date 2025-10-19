@@ -20,6 +20,13 @@ app.use(
   }),
 );
 
+// Registering Routes
+import healthCheckRouter from "./routes/healthcheck.routes.js";
+
+app.use("/api/v1/healthcheck", healthCheckRouter); // Health Check router registration
+
+// ----------------------------
+
 app.get("/", (req, res) => {
   res.send("Welcome to Basecamp Project Manager");
 });
