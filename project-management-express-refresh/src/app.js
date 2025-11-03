@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -9,6 +10,9 @@ app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
 app.use(express.static("public"));
+
+// setting cookie parser
+app.use(cookieParser());
 
 // cors configurations
 app.use(
@@ -23,6 +27,7 @@ app.use(
 // Registering Routes
 import healthCheckRouter from "./routes/healthcheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import { cookie } from "express-validator";
 
 app.use("/api/v1/healthcheck", healthCheckRouter); // Health Check router registration
 app.use("/api/v1/auth", authRouter);

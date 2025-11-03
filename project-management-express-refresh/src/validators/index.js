@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 
-// writing custom validator
+// writing custom validator for registering a user
 const userRegisterValidator = () => {
   return [
     body("email")
@@ -22,4 +22,12 @@ const userRegisterValidator = () => {
   ];
 };
 
-export { userRegisterValidator };
+// writing custom validator for logging in a user
+const userLoginValidator = () => {
+  return [
+    body("email").optional().isEmail().withMessage("Email is invalid"),
+    body("password").notEmpty().withMessage("Password is required"),
+  ];
+};
+
+export { userRegisterValidator, userLoginValidator };
